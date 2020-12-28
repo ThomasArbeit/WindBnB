@@ -246,8 +246,8 @@ export default {
   }
 
   #app{
-    max-width: 1440px;
-    padding: 0 95px;
+    max-width: 1300px;
+    padding: 0 25px;
 
     margin: 0 auto;
   }

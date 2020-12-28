@@ -39,6 +39,18 @@ export default {
   margin-bottom: 85px;
 }
 
+@media screen and (max-width: 1000px) {
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 622px) {
+  .grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .stays{
   width: 100%;
   height: 343px;

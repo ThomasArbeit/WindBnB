@@ -28,8 +28,13 @@
               </select>
           </div>
 
-          <div class="modale__section">
-            <input class="modale__button" type="submit" v-on:click.prevent="submit(city, guest), openCloseModale() ">
+          <div class="modale__section modale__section--last">
+            <button class="modale__button" type="submit" v-on:click.prevent="submit(city, guest), openCloseModale() ">
+              <span class="material-icons">
+                search
+              </span>
+              Search
+              </button>
           </div>
           
 
@@ -60,6 +65,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
   .modale{
     position: fixed;
     top: 0;
@@ -91,9 +99,9 @@ export default {
   }
 
   .modale__center{
-    max-width: 1440px;
+    max-width: 1300px;
     width: 100%;
-    padding: 93px 95px 0px;
+    padding: 93px 25px 0px;
     margin: 0 auto;
   }
 
@@ -103,6 +111,17 @@ export default {
     border-radius: 16px;
 
     overflow: hidden;
+  }
+
+  @media screen and (max-width: 465px){
+    .modale__form{
+      flex-direction: column;
+    }
+
+    .modale__section{
+      border-bottom: 1px solid  #F2F2F2;
+      border-right: none;
+    }
   }
 
   .modale__select{
@@ -115,9 +134,34 @@ export default {
     position: relative;
   }
 
+  .modale__section--last{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .modale__button{
-    display: block;
-    height: 100%;
+    display: flex;
+    height: 87%;
+    background-color: rgba(235, 87, 87, 0.9);
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Mulish';
+    line-height: 17px;
+
+    border-radius: 16px;
+
+    padding: 16px 24px 14px 27px;
+
+    align-items: center;
+
+    cursor: pointer;
+  }
+
+  .modale__button span{
+    margin-right: 11px;
   }
 
   .modale__label{
@@ -142,6 +186,8 @@ export default {
     border-radius: 16px;
 
     -webkit-appearance: none; 
+
+    cursor: pointer;
   }
 
   .modale__select > option{

@@ -55,6 +55,27 @@ export default {
     font-family: 'Mulish';
   }
 
+  @media screen and (max-width: 468px) {
+    .header{
+      flex-direction: column;
+      align-items: baseline;
+      margin-bottom: 31px;
+    }
+
+    .header__logo{
+      margin-bottom: 37px;
+      width: 124px;
+    }
+
+    .header__logo img{
+      width: 100%;
+    }
+
+    .header__nav{
+      margin: 0 auto;
+    }
+  }
+
   .header__nav{
     display: flex;
     align-items: center;
